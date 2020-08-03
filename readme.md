@@ -3,14 +3,15 @@
 Obtener los resultados de busqueda de la url `https://listado.mercadolibre.com.ar/xiaomi#D[A:xiaomi]` en las **5** primeras páginas de la búsqueda.
 
 ## Descripción del proyecto
-En este proyecto la extraccion de informacion se realiza con el Framework **Scrapy**, donde se usaron los siguientes expresiones xpath :
-- lista de productos: ```
-//a[@class="item__info-title"]/span[@class="main-title"]/text()
-```
+La extraccion de informacion se realiza con el Framework **Scrapy**, donde se usaron los siguientes expresiones xpath :
 
-- link para siguiente pagina: ```
- '//ul[contains(@class,"andes-pagination")]//li[contains(@class, "andes-pagination__button--next")]/a/@href'
-```
+ - Lista de productos:
+
+    '//a[@class="item__info-title"]/span[@class="main-title"]/text()'
+
+- Siguiente Pagina
+
+    '//ul[contains(@class,"andes-pagination")]//li[contains(@class, "andes-pagination__button--next")]/a/@href'
 
 Este proyecto se aloja sobre scrapyhub para su depligue y automatizacion de jobs, se configura para que se actualice cada 2hrs. La visualizacion de su resultado se realiza sobre un projecto de JavaScript, este proyecto es alojado sobre GitHub pages.
 
