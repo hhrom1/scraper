@@ -7,8 +7,6 @@ const Home = async() => {
     jobs.forEach(function (job) {
         total += 1;
     });
-    console.log(jobs);
-    console.log(total);
     const view = `
     <div class="card mt-5 mb-5">
         <div class="card-body">
